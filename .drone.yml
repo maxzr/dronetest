@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: postgres
+    image: postgres:11
+    detach: true
+    environment:
+      POSTGRES_PASSWORD: aoeu
+      POSTGRES_DB: mity
+      POSTGRES_USER: aoeu
+    when:
+      event:
+        - push
